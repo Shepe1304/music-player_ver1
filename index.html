@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Music-Player.css" />
+    <title>SHEPE'S MUSIC PLAYER</title>
+  </head>
+  <body>
+    <div class="background">
+      <img src="./img/background.jpg" alt="background" />
+      <div class=""></div>
+    </div>
+    <div class="main">
+      <div class="left-part">
+        <div class="volume-container">
+          <div class="volume-icon-container">
+            <i class="volume-icon fa-solid fa-volume"></i>
+          </div>
+          <div class="volume-slider-container">
+            <div class="volume-adjust-symbols">
+              <div class="minus">-</div>
+              <div class="volumeCurrent">80</div>
+              <div class="plus">+</div>
+            </div>
+            <input class="volume-slider" type="range" />
+          </div>
+        </div>
+        <div class="song-list-container">
+          <div class="song-list">
+            <div class="song-list-minimize-btn">
+              <div class="song-list-minimize">Song List</div>
+            </div>
+            <div class="songs">
+              <div class="song" style="color: yellow" onclick="loadSong(0)">
+                <div class="middle-dot">&#183;</div>
+                <div class="song-name-list">Achilles Come Down</div>
+                <div class="middle-dot">&#183;</div>
+              </div>
+              <div class="song" onclick="loadSong(1)">
+                <div class="middle-dot">&#183;</div>
+                <div class="song-name-list">Tell Me</div>
+                <div class="middle-dot">&#183;</div>
+              </div>
+              <div class="song" onclick="loadSong(2)">
+                <div class="middle-dot">&#183;</div>
+                <div class="song-name-list">Comedy</div>
+                <div class="middle-dot">&#183;</div>
+              </div>
+              <div class="song" onclick="loadSong(3)">
+                <div class="middle-dot">&#183;</div>
+                <div class="song-name-list">Everything Goes On</div>
+                <div class="middle-dot">&#183;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <audio controls>
+        <source src="./music/achillescomedown.mp3" type="audio/mpeg" />
+      </audio>
+
+      <div class="song-player-container">
+        <div class="song-player">
+          <div class="song-img">
+            <img id="cover" src="./img/achillescomedown.jpg" alt="" />
+          </div>
+          <div class="song-info">
+            <div class="song-name">Achilles Come Down</div>
+            <div class="song-artist">
+              <span class="artist-name">Gang Of Youths Band</span>
+            </div>
+          </div>
+          <div class="time-bar">
+            <div class="progress-bar-container">
+              <div class="time">
+                <div class="fromStart">0:00</div>
+                <div class="finish">7:03</div>
+              </div>
+              <div class="progress-bar">
+                <input class="progress" type="range" value="0" />
+              </div>
+            </div>
+
+            <div class="buttons">
+              <div class="btn prev-container" style="color: rgb(5, 53, 53)">
+                <i id="prev" class="icon fa-solid fa-backward-step"></i>
+              </div>
+              <div class="btn rewind-container" style="color: rgb(12, 95, 95)">
+                <i id="rewind" class="icon fa-solid fa-backward"></i>
+              </div>
+              <div
+                class="btn play-pause-container"
+                style="color: rgb(42, 112, 112)"
+              >
+                <i id="play" class="icon fa-solid fa-play"></i>
+              </div>
+              <div class="btn forward-container" style="color: rgb(12, 95, 95)">
+                <i id="forward" class="icon fa-solid fa-forward"></i>
+              </div>
+              <div class="btn next-container" style="color: rgb(5, 53, 53)">
+                <i id="next" class="icon fa-solid fa-forward-step"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="Music-Player.js"></script>
+  </body>
+</html>
